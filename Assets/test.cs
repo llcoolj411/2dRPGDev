@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class test : MonoBehaviour
 {
-    void Start()
+   public void hogehoge()
     {
-        
     }
 }
