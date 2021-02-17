@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public enum SkillType
 {
-    ATTACK,
-    DEFFENCE,
-    SPEED1,
-    SPEED2,
-    COMBO,
-    COMBO2
+    Lv1ATTACK,
+    Lv2Passive,
+    Lv2Active,
+    Lv3Passive,
+    Lv3Active,
+    Lv4Passive
+
 }
 
 
@@ -42,10 +43,26 @@ public class SkillManager : MonoBehaviour
             return false;
         }
 
-        if (skillType == SkillType.SPEED2)
+        if ((skillType == SkillType.Lv2Passive) || (skillType == SkillType.Lv2Active))
         {
-            return HasSkill(SkillType.SPEED1);
+            return HasSkill(SkillType.Lv1ATTACK);
         }
+
+        if (skillType == SkillType.Lv3Passive)
+        {
+            return HasSkill(SkillType.Lv2Active);
+        }
+
+        if (skillType == SkillType.Lv3Active)
+        {
+            return HasSkill(SkillType.Lv2Passive);
+        }
+
+        if (skillType == SkillType.Lv4Passive)
+        {
+            return HasSkill(SkillType.Lv3Passive) && HasSkill(SkillType.Lv3Active);
+        }
+
         return true;
     }
 

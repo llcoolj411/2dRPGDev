@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SkillBlock : MonoBehaviour
 {
-    SkillType skillType;
+    [SerializeField] SkillType skillType;
     [SerializeField] int cost;
     [SerializeField] new string name;
     [SerializeField] string info;
