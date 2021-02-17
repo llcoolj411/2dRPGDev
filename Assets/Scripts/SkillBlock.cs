@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SkillBlock : MonoBehaviour
 {
@@ -8,9 +9,16 @@ public class SkillBlock : MonoBehaviour
     [SerializeField] int cost;
     [SerializeField] new string name;
     [SerializeField] string info;
+    [SerializeField] GameObject hidepanel;
+
+    void Start()
+    {
+        CheckActiveBlock();
+    }
 
     public void OnClick()
     {
+
         //習得済みなら何もしない
         if (SkillManager.instance.HasSkill(this.skillType))
         {
@@ -25,13 +33,32 @@ public class SkillBlock : MonoBehaviour
         {
             SkillManager.instance.SkillLearn(this.skillType);
             Debug.Log("習得！");
+            ChangeLearnedBlock(Color.green);
         }
         else
         {
+            //習得不可能ならログを出す
             Debug.Log("習得NG");
         }
-        //習得不可能ならログを出す
 
+        void ChangeLearnedBlock(Color color)
+        {
+            Image image = GetComponent<Image>();
+            image.color = color;
 
+        }
+    }
+
+    public void CheckActiveBlock()
+    {
+        if (SkillManager.instance.CanLearnSkill(cost, skillType))
+        {
+            hidepanel.SetActive(false);
+        }
+
+        else
+        {
+            hidepanel.SetActive(true);
+        }
     }
 }

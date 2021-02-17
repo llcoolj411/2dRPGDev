@@ -14,11 +14,13 @@ public enum SkillType
 
 }
 
-
 public class SkillManager : MonoBehaviour
 {
+    [SerializeField] GameObject skillBlockPanel;
+
     int skillpoint;
     List<SkillType> SkillList = new List<SkillType>();
+    SkillBlock[] skillBlocks;
 
     public static SkillManager instance;
 
@@ -28,6 +30,11 @@ public class SkillManager : MonoBehaviour
         {
             instance = this;
         }
+    }
+
+    void Start()
+    {
+        skillBlocks = skillBlockPanel.GetComponentsInChildren<SkillBlock>();
     }
 
 
@@ -69,5 +76,14 @@ public class SkillManager : MonoBehaviour
     public void SkillLearn(SkillType skillType)
     {
         SkillList.Add(skillType);
+        CheckActiveBlocks();
+    }
+
+    void CheckActiveBlocks()
+    {
+        foreach (SkillBlock skillBlock in skillBlocks)
+        {
+            skillBlock.CheckActiveBlock();
+        }
     }
 }
