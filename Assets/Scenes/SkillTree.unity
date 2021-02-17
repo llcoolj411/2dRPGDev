@@ -1711,6 +1711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1feaa53deee65e4b89c09039602d35a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillBlockPanel: {fileID: 999092731}
 --- !u!1 &1742139666
 GameObject:
   m_ObjectHideFlags: 0
