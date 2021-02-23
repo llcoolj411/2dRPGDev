@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class SkillBlock : MonoBehaviour
 {
+    public SkillManager skillManager;
+
     [SerializeField] SkillType skillType;
     [SerializeField] int cost;
     [SerializeField] new string name;

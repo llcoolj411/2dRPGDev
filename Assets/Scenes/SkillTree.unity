@@ -130,6 +130,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1698001813906767044, guid: 99fc2eb01f4dfc1468c27ca2fbf6111c,
         type: 3}
+      propertyPath: cost
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698001813906767044, guid: 99fc2eb01f4dfc1468c27ca2fbf6111c,
+        type: 3}
       propertyPath: skillType
       value: 4
       objectReference: {fileID: 0}
@@ -296,6 +301,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1698001813906767044, guid: 99fc2eb01f4dfc1468c27ca2fbf6111c,
         type: 3}
+      propertyPath: cost
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698001813906767044, guid: 99fc2eb01f4dfc1468c27ca2fbf6111c,
+        type: 3}
       propertyPath: skillType
       value: 3
       objectReference: {fileID: 0}
@@ -460,6 +470,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 999092732}
     m_Modifications:
+    - target: {fileID: 1698001813906767044, guid: 99fc2eb01f4dfc1468c27ca2fbf6111c,
+        type: 3}
+      propertyPath: cost
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1698001813906767044, guid: 99fc2eb01f4dfc1468c27ca2fbf6111c,
         type: 3}
       propertyPath: skillType
@@ -954,6 +969,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 999092732}
     m_Modifications:
+    - target: {fileID: 1698001813906767044, guid: 99fc2eb01f4dfc1468c27ca2fbf6111c,
+        type: 3}
+      propertyPath: cost
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1698001813906767044, guid: 99fc2eb01f4dfc1468c27ca2fbf6111c,
         type: 3}
       propertyPath: skillType
@@ -1712,6 +1732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkillPointText: {fileID: 2047995417}
+  HaveSkillPoint: 10
   skillBlockPanel: {fileID: 999092731}
   DammyPlayerManager: {fileID: 1708900890}
 --- !u!1 &1708900890
@@ -1743,6 +1764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e2e1b35d098fa47941b8391cec0e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HaveCost: 0
 --- !u!4 &1708900892
 Transform:
   m_ObjectHideFlags: 0
@@ -2279,6 +2301,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 999092732}
     m_Modifications:
+    - target: {fileID: 1698001813906767044, guid: 99fc2eb01f4dfc1468c27ca2fbf6111c,
+        type: 3}
+      propertyPath: cost
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1800874535785857081, guid: 99fc2eb01f4dfc1468c27ca2fbf6111c,
         type: 3}
       propertyPath: m_Name

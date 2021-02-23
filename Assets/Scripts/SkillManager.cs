@@ -17,16 +17,16 @@ public enum SkillType
 public class SkillManager : MonoBehaviour
 {
     public Text SkillPointText;
+    [SerializeField] int HaveSkillPoint;
 
-    public void UpdateSkillpointUI(int HaveSkillpoint)
+    public void UpdateSkillpointUI()
     {
-        SkillPointText.text = HaveSkillpoint.ToString();
+        SkillPointText.text = string.Format("消費可能スキルポイント：{0}", HaveSkillPoint);
     }
 
     [SerializeField] GameObject skillBlockPanel;
     [SerializeField] GameObject DammyPlayerManager;
 
-    int skillpoint;
     List<SkillType> SkillList = new List<SkillType>();
     SkillBlock[] skillBlocks;
 
@@ -43,7 +43,7 @@ public class SkillManager : MonoBehaviour
     void Start()
     {
         skillBlocks = skillBlockPanel.GetComponentsInChildren<SkillBlock>();
-        //UpdateSkillpointUI(); 
+        UpdateSkillpointUI(); 
     }
 
 
@@ -54,7 +54,7 @@ public class SkillManager : MonoBehaviour
 
     public bool CanLearnSkill(int cost,SkillType skillType)
     {
-        if (skillpoint < cost)
+        if (HaveSkillPoint < cost)
         {
             return false;
         }
@@ -80,9 +80,10 @@ public class SkillManager : MonoBehaviour
         }
 
         return true;
+        
     }
 
-    public void SkillLearn(SkillType skillType)
+    public void SkillLearn(SkillType skillType) 
     {
         SkillList.Add(skillType);
         CheckActiveBlocks();
