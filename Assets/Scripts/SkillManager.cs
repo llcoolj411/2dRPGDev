@@ -16,7 +16,15 @@ public enum SkillType
 
 public class SkillManager : MonoBehaviour
 {
+    public Text SkillPointText;
+
+    public void UpdateSkillpointUI(int HaveSkillpoint)
+    {
+        SkillPointText.text = HaveSkillpoint.ToString();
+    }
+
     [SerializeField] GameObject skillBlockPanel;
+    [SerializeField] GameObject DammyPlayerManager;
 
     int skillpoint;
     List<SkillType> SkillList = new List<SkillType>();
@@ -35,6 +43,7 @@ public class SkillManager : MonoBehaviour
     void Start()
     {
         skillBlocks = skillBlockPanel.GetComponentsInChildren<SkillBlock>();
+        //UpdateSkillpointUI(); 
     }
 
 
