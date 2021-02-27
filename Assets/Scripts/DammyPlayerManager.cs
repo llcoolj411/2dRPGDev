@@ -5,5 +5,5 @@ using UnityEngine.UI;
 
 public class DammyPlayerManager : MonoBehaviour
 {
-    [SerializeField] int HaveCost;
+    public int HaveCost;
 }

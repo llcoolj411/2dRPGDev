@@ -1731,9 +1731,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1feaa53deee65e4b89c09039602d35a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkillPointText: {fileID: 2047995417}
   HaveSkillPoint: 10
   skillBlockPanel: {fileID: 999092731}
+  SkillPointText: {fileID: 2047995417}
   DammyPlayerManager: {fileID: 1708900890}
 --- !u!1 &1708900890
 GameObject:
@@ -1764,7 +1764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e2e1b35d098fa47941b8391cec0e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HaveCost: 0
+  HaveCost: 5
 --- !u!4 &1708900892
 Transform:
   m_ObjectHideFlags: 0
